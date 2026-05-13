@@ -1,0 +1,1368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Bow Mark · Paving, Concrete & Construction Management since 1979</title>
+<meta name="description" content="Bow Mark Paving & Concrete. Asphalt paving, concrete, and construction management for commercial, residential, and transportation infrastructure projects across Alberta." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+/* ============================================
+   Bow Mark · Liquid Glass · Mono Grey theme
+   ============================================ */
+:root {
+  --bg:        #0b0d10;
+  --bg-2:      #0f1216;
+  --ink:       #f3f5f8;
+  --ink-2:     #d7dbe2;
+  --ink-3:     #a3a9b3;
+  --muted:     #6f7682;
+  --hairline:  rgba(255, 255, 255, 0.08);
+  --hairline-strong: rgba(255, 255, 255, 0.14);
+  --glass-bg:        rgba(255, 255, 255, 0.045);
+  --glass-bg-strong: rgba(255, 255, 255, 0.075);
+  --glass-border:    rgba(255, 255, 255, 0.10);
+  --glass-border-strong: rgba(255, 255, 255, 0.18);
+  --glass-shadow:    0 30px 70px -30px rgba(0,0,0,.7), 0 2px 6px -2px rgba(0,0,0,.4);
+  --silver-1: #e9ecf1;
+  --silver-2: #c2c6cd;
+  --silver-3: #8a8f97;
+  --radius:    14px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
+  --font-sans:    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --max: 1200px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--bg);
+  background-image:
+    radial-gradient(1200px 700px at 75% -10%, rgba(255,255,255,.05), transparent 60%),
+    radial-gradient(900px 600px at -15% 25%, rgba(255,255,255,.035), transparent 65%),
+    linear-gradient(180deg, #0a0c0f 0%, #0b0d10 60%, #0a0c0f 100%);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: 0; background: transparent; color: inherit; }
+
+.container { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+.skip { position: absolute; left: -9999px; background: #fff; color: #000; padding: .5rem 1rem; border-radius: 8px; }
+.skip:focus { left: 1rem; top: 1rem; z-index: 200; }
+
+h1, h2, h3, h4 { font-family: var(--font-display); margin: 0; letter-spacing: -.02em; line-height: 1.05; }
+h1 { font-size: clamp(2.5rem, 6.8vw, 5.75rem); font-weight: 700; }
+h2 { font-size: clamp(1.85rem, 3.7vw, 3rem); font-weight: 600; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+p { margin: 0 0 1rem; color: var(--ink-2); }
+.muted { color: var(--muted); font-weight: 500; }
+.kicker {
+  font-family: var(--font-sans);
+  text-transform: uppercase; letter-spacing: .2em; font-size: .72rem;
+  color: var(--silver-1); margin: 0 0 1rem; font-weight: 600;
+  display: inline-flex; align-items: center; gap: .55rem;
+}
+.kicker::before {
+  content: ""; width: 24px; height: 1px;
+  background: linear-gradient(90deg, var(--silver-1), transparent);
+}
+.lede { font-size: 1.08rem; color: var(--ink); max-width: 56ch; }
+
+/* Buttons */
+.btn {
+  position: relative;
+  display: inline-flex; align-items: center; gap: .55rem;
+  padding: .85rem 1.25rem;
+  color: #0b0c0e; font-weight: 600;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #fafbfd 0%, #d6d9df 100%);
+  border: 1px solid rgba(255,255,255,.6);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.7) inset,
+    0 -1px 0 rgba(0,0,0,.10) inset,
+    0 12px 30px -10px rgba(0,0,0,.55),
+    0 4px 10px -2px rgba(0,0,0,.35);
+  transition: transform .2s ease, box-shadow .25s ease, filter .2s ease;
+  white-space: nowrap; isolation: isolate; overflow: hidden;
+}
+.btn::after {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,.55), transparent);
+  pointer-events: none; border-radius: 999px 999px 0 0;
+}
+.btn:hover { transform: translateY(-1px); filter: brightness(1.04); }
+.btn:active { transform: translateY(0); }
+.btn-lg { padding: 1rem 1.5rem; font-size: 1rem; }
+.btn-block { display: inline-flex; width: 100%; justify-content: center; }
+.btn-ghost {
+  color: var(--ink);
+  background: linear-gradient(180deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,.03) 100%), rgba(20, 24, 29, .55);
+  border: 1px solid var(--glass-border-strong);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.18), inset 0 -1px 0 rgba(0,0,0,.2), 0 8px 24px -8px rgba(0,0,0,.4);
+}
+.btn-ghost:hover { filter: none; }
+.btn-ghost::after { display: none; }
+.ghost-link {
+  display: inline-flex; align-items: center; gap: .45rem;
+  color: var(--ink-3); font-size: .9rem;
+  font-variant-numeric: tabular-nums;
+  padding: .45rem .75rem; border-radius: 999px;
+  border: 1px solid transparent;
+  transition: color .2s ease, border-color .2s ease, background .2s ease;
+}
+.ghost-link:hover { color: var(--ink); border-color: var(--glass-border-strong); background: var(--glass-bg); }
+
+/* Nav */
+.nav {
+  position: sticky; top: 0; left: 0; right: 0; z-index: 50;
+  background: linear-gradient(180deg, rgba(11, 13, 16, .92) 0%, rgba(11, 13, 16, .78) 100%);
+  border-bottom: 1px solid transparent;
+  transition: background .25s ease, border-color .25s ease;
+}
+.nav.scrolled {
+  background: linear-gradient(180deg, rgba(11, 13, 16, .96) 0%, rgba(11, 13, 16, .88) 100%);
+  border-bottom-color: var(--hairline);
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,.5);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .9rem 0; gap: 2rem;
+}
+.brand { display: inline-flex; align-items: center; gap: .8rem; text-decoration: none; }
+.brand-logo { height: 44px; width: auto; filter: drop-shadow(0 6px 14px rgba(0,0,0,.55)); }
+.links { display: flex; gap: 2rem; }
+.links a { color: var(--ink-2); font-size: .92rem; font-weight: 500; position: relative; }
+.links a:hover { color: var(--ink); }
+.links a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 2px;
+  background: linear-gradient(90deg, var(--silver-1), var(--silver-2));
+  border-radius: 2px; transform: scaleX(0); transform-origin: left;
+  transition: transform .25s ease;
+}
+.links a:hover::after { transform: scaleX(1); }
+.nav-cta { display: flex; align-items: center; gap: .85rem; }
+.menu-btn {
+  display: inline-flex; width: 42px; height: 42px;
+  flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+  border: 1px solid var(--glass-border-strong);
+  margin-left: .25rem;
+  transition: background .2s ease, border-color .2s ease;
+}
+.menu-btn:hover { background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.28); }
+.menu-btn span {
+  display: block; width: 20px; height: 2px; background: var(--ink); border-radius: 2px;
+  transition: transform .25s ease, opacity .2s ease;
+}
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-menu {
+  display: none; flex-direction: column; gap: .25rem;
+  padding: 1rem 1.25rem 1.5rem;
+  background: rgba(11, 13, 16, .98);
+  border-bottom: 1px solid var(--hairline);
+}
+.mobile-menu a { padding: .75rem 0; color: var(--ink); border-bottom: 1px solid var(--hairline); }
+.mobile-menu a.btn, .mobile-menu a:last-child { border-bottom: 0; }
+.mobile-menu.open { display: flex; }
+
+/* Hero with real photo */
+.hero {
+  position: relative; min-height: 92vh;
+  display: grid; place-items: center;
+  padding: 7rem 0 5rem; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background: url('images/transportation/bow01.jpg') center/cover no-repeat;
+}
+.hero-bg::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(10,12,15,.55) 0%, rgba(10,12,15,.55) 50%, rgba(10,12,15,.95) 100%),
+    linear-gradient(90deg, rgba(10,12,15,.85) 0%, rgba(10,12,15,.35) 60%, rgba(10,12,15,.55) 100%);
+}
+.hero-inner { position: relative; z-index: 1; text-align: left; max-width: 1100px; width: 100%; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: .6rem;
+  padding: .5rem .95rem;
+  background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.03));
+  border: 1px solid var(--glass-border-strong);
+  border-radius: 999px; font-size: .78rem; color: var(--ink-2);
+  margin-bottom: 1.75rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16);
+}
+.eyebrow .dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--silver-1); box-shadow: 0 0 14px rgba(255,255,255,.5);
+  animation: pulse 2.6s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.35); opacity: .55; }
+}
+.hero-title { margin: 0 0 1.4rem; letter-spacing: -.035em; }
+.grad {
+  background: linear-gradient(180deg, #ffffff 0%, #cdd1d7 45%, #888d96 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero-sub {
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  color: var(--ink-2); max-width: 60ch; margin-bottom: 2.5rem;
+}
+.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-bottom: 4rem; }
+.stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem;
+  margin: 0; padding: 1.75rem 0 0;
+  border-top: 1px solid var(--hairline);
+}
+.stat dt { font-size: .7rem; color: var(--ink-3); letter-spacing: .16em; text-transform: uppercase; margin-bottom: .4rem; }
+.stat dd {
+  margin: 0; font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem); font-weight: 600;
+  color: var(--ink); font-variant-numeric: tabular-nums;
+}
+.stat sup { color: var(--silver-1); font-size: .7em; margin-left: 2px; }
+
+/* Trust ticker */
+.trust {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  background: rgba(255, 255, 255, .015);
+  overflow: hidden;
+}
+.ticker { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+.ticker-row {
+  display: flex; gap: 2rem; align-items: center; white-space: nowrap;
+  animation: ticker 40s linear infinite;
+  font-family: var(--font-display); font-weight: 500;
+  text-transform: uppercase; letter-spacing: .14em;
+  color: var(--ink-3); font-size: .95rem;
+}
+.ticker-row span:not(:nth-child(2n)) { color: var(--ink); }
+.ticker-row span:nth-child(2n) { color: var(--silver-3); }
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.section { padding: 7rem 0; position: relative; }
+.section-head { margin-bottom: 3.75rem; max-width: 720px; }
+
+/* Services */
+.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.service-card {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.02) 100%),
+    rgba(20, 24, 29, .55);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: transform .35s ease, border-color .3s ease, background .3s ease;
+  overflow: hidden;
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255,255,255,.08);
+}
+.service-card::after {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.4), transparent);
+}
+.service-card:hover { transform: translateY(-4px); border-color: var(--glass-border-strong); }
+.service-card.featured {
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.025) 60%);
+  border-color: rgba(255,255,255,.18);
+}
+.badge {
+  position: absolute; top: 1.25rem; right: 1.25rem;
+  font-size: .66rem; letter-spacing: .16em; text-transform: uppercase;
+  background: rgba(255,255,255,.92); color: #0b0c0e;
+  padding: .3rem .65rem; border-radius: 999px; font-weight: 700;
+  box-shadow: 0 6px 18px -4px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.9);
+}
+.service-icon {
+  width: 56px; height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.02));
+  border: 1px solid var(--glass-border-strong);
+  color: var(--ink);
+  display: grid; place-items: center;
+  margin-bottom: 1.25rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 6px 16px -6px rgba(0,0,0,.4);
+}
+.service-icon svg { width: 32px; height: 32px; }
+.service-card h3 { margin-bottom: .65rem; }
+.chips { list-style: none; padding: 0; margin: 1rem 0 1.5rem; display: flex; flex-wrap: wrap; gap: .4rem; }
+.chips li {
+  font-size: .78rem; padding: .3rem .7rem;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--hairline);
+  border-radius: 999px; color: var(--ink-2);
+}
+.card-link {
+  color: var(--ink); font-weight: 600; font-size: .92rem;
+  transition: gap .2s ease, color .2s ease;
+  display: inline-flex; align-items: center; gap: .35rem;
+  border-bottom: 1px solid rgba(255,255,255,.18); padding-bottom: 2px;
+}
+.card-link:hover { gap: .55rem; color: var(--silver-1); }
+
+/* Projects gallery with real images */
+.proj-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+.proj {
+  display: block;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: rgba(20, 24, 29, .6);
+  border: 1px solid var(--glass-border);
+  position: relative;
+  transition: transform .3s ease, border-color .3s ease;
+  isolation: isolate;
+  box-shadow: var(--glass-shadow);
+}
+.proj:hover { transform: translateY(-4px); border-color: var(--glass-border-strong); }
+.proj-img {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #0b0d10;
+}
+.proj-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .8s ease, filter .5s ease;
+  filter: saturate(.85) contrast(1.05);
+}
+.proj:hover .proj-img img { transform: scale(1.06); filter: saturate(1) contrast(1.05); }
+.proj-meta { padding: 1.5rem; }
+.proj-tag {
+  display: inline-block; font-size: .68rem; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--silver-1);
+  margin-bottom: .65rem; font-weight: 600;
+}
+.proj h3 { margin-bottom: .35rem; }
+.proj p { margin: 0; font-size: .92rem; }
+
+/* Category cards (replaces project grid) */
+.cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.cat-card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,.015) 100%),
+    rgba(20, 24, 29, .6);
+  border: 1px solid var(--glass-border);
+  position: relative;
+  cursor: pointer;
+  isolation: isolate;
+  box-shadow: var(--glass-shadow);
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+}
+.cat-card::after {
+  content: "";
+  position: absolute; left: 0; right: 0; top: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.4), transparent);
+}
+.cat-card:hover { transform: translateY(-4px); border-color: var(--glass-border-strong); }
+.cat-card:focus-visible { outline: 2px solid var(--silver-1); outline-offset: 3px; }
+.cat-img {
+  aspect-ratio: 4 / 3; overflow: hidden;
+  background: #0a0c0f;
+  display: grid; place-items: center;
+}
+.cat-img img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  transition: transform .7s ease, filter .5s ease;
+  filter: saturate(.92) contrast(1.04);
+}
+.cat-card:hover .cat-img img { transform: scale(1.04); filter: saturate(1) contrast(1.04); }
+.cat-meta { padding: 1.5rem 1.5rem 1.6rem; }
+.cat-tag {
+  display: inline-block; font-size: .68rem; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--silver-1);
+  margin-bottom: .65rem; font-weight: 600;
+}
+.cat-card h3 { margin-bottom: .5rem; font-size: 1.35rem; line-height: 1.2; }
+.cat-card p { font-size: .95rem; margin: 0 0 1.1rem; color: var(--ink-2); }
+.cat-link {
+  display: inline-flex; align-items: center; gap: .4rem;
+  color: var(--ink); font-weight: 600; font-size: .9rem;
+  border-bottom: 1px solid rgba(255,255,255,.18);
+  padding-bottom: 2px;
+  transition: gap .2s ease, color .2s ease;
+}
+.cat-card:hover .cat-link { gap: .65rem; color: var(--silver-1); }
+
+/* Modal */
+.modal {
+  position: fixed; inset: 0; z-index: 100;
+  display: grid; place-items: center;
+  padding: 1.5rem;
+}
+.modal[hidden] { display: none; }
+.modal-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(5, 6, 8, 0.78);
+  animation: fade .25s ease;
+}
+.modal-panel {
+  position: relative;
+  width: min(100%, 1080px);
+  max-height: calc(100vh - 3rem);
+  overflow-y: auto;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.02) 60%),
+    rgba(14, 18, 23, .98);
+  border: 1px solid var(--glass-border-strong);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 50px 120px -30px rgba(0,0,0,.9), inset 0 1px 0 rgba(255,255,255,.10);
+  animation: rise .35s cubic-bezier(.2, .8, .2, 1);
+}
+.modal-close {
+  position: absolute; top: 1rem; right: 1rem; z-index: 2;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--glass-border-strong);
+  color: var(--ink);
+  display: grid; place-items: center;
+  transition: background .2s ease, transform .2s ease;
+}
+.modal-close:hover { background: rgba(255,255,255,.12); transform: rotate(90deg); }
+.modal-body { padding: 2.5rem 2.5rem 2.25rem; }
+.modal-kicker {
+  display: inline-flex; align-items: center; gap: .55rem;
+  font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--silver-1); font-weight: 600; margin: 0 0 1rem;
+}
+.modal-kicker::before {
+  content: ""; width: 24px; height: 1px;
+  background: linear-gradient(90deg, var(--silver-1), transparent);
+}
+.modal-title {
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem); line-height: 1.1;
+  margin: 0 0 2rem;
+}
+.modal-section { margin-bottom: 1.75rem; }
+.modal-section h3 {
+  font-family: var(--font-sans);
+  font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--muted); margin: 0 0 .65rem; font-weight: 600;
+}
+.modal-section p {
+  font-size: 1.02rem; line-height: 1.65; color: var(--ink-2); margin: 0 0 .9rem;
+}
+.modal-section p:last-child { margin-bottom: 0; }
+.modal-chips { list-style: none; padding: 0; margin: 0 0 1.2rem; display: flex; flex-wrap: wrap; gap: .4rem; }
+.modal-chips li {
+  font-size: .78rem; padding: .3rem .7rem;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--hairline);
+  border-radius: 999px; color: var(--ink-2);
+}
+.modal-gallery {
+  display: grid; gap: 1rem;
+  margin: .5rem 0 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--hairline);
+}
+.modal-gallery:empty { display: none; }
+.modal-cta { padding-top: .5rem; }
+.modal-shot {
+  border-radius: var(--radius); overflow: hidden;
+  border: 1px solid var(--glass-border);
+  background: rgba(20,24,29,.6);
+}
+.modal-shot img {
+  display: block; width: 100%; height: auto;
+  aspect-ratio: 16 / 10; object-fit: cover;
+  filter: saturate(.92) contrast(1.04);
+}
+.modal-shot figcaption {
+  padding: .7rem .9rem .85rem;
+  font-size: .82rem; color: var(--ink-3);
+}
+.modal-shot figcaption strong { color: var(--ink); display: block; margin-bottom: .15rem; font-weight: 600; font-family: var(--font-sans); }
+.modal-shot-where { color: var(--muted); font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; }
+
+/* Multi-project gallery (commercial category) */
+.modal-project { margin-bottom: 2.25rem; }
+.modal-project:last-child { margin-bottom: 0; }
+.modal-project-head {
+  display: flex; flex-direction: column; gap: .15rem;
+  padding-bottom: .75rem; margin-bottom: .85rem;
+  border-bottom: 1px solid var(--hairline);
+}
+.modal-project-head h4 {
+  font-family: var(--font-display);
+  font-size: 1.15rem; font-weight: 600;
+  color: var(--ink); margin: 0;
+  letter-spacing: -.01em;
+}
+.modal-project-where {
+  font-family: var(--font-sans);
+  font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--silver-1); font-weight: 600;
+}
+.modal-project-blurb {
+  font-size: .92rem; line-height: 1.55;
+  color: var(--ink-3);
+  margin: 0 0 1rem;
+}
+.modal-project-shots { display: grid; gap: .9rem; }
+.modal-project .modal-shot img { aspect-ratio: 16 / 10; }
+@keyframes fade { from { opacity: 0 } to { opacity: 1 } }
+@keyframes rise { from { opacity: 0; transform: translateY(20px) } to { opacity: 1; transform: translateY(0) } }
+body.modal-open { overflow: hidden; }
+
+/* About */
+.about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 4rem; align-items: start; }
+.check-list { list-style: none; padding: 0; margin: 1.5rem 0 2rem; display: grid; gap: .7rem; }
+.check-list li { padding-left: 1.85rem; position: relative; color: var(--ink); }
+.check-list li::before {
+  content: "✓"; position: absolute; left: 0; top: 1px;
+  color: #0b0c0e; font-weight: 700;
+  width: 1.25rem; height: 1.25rem; display: grid; place-items: center;
+  background: linear-gradient(180deg, #fafbfd, #c9cdd4);
+  border-radius: 6px; font-size: .72rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.7), 0 2px 6px -2px rgba(0,0,0,.5);
+}
+.about-card {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.02) 100%),
+    rgba(20, 24, 29, .6);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  position: sticky; top: 100px;
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255,255,255,.08);
+}
+.ac-row { display: flex; justify-content: space-between; gap: 1rem; padding: .95rem 0; border-bottom: 1px dashed var(--hairline); font-size: .92rem; }
+.ac-row:last-child { border-bottom: 0; }
+.ac-label { color: var(--muted); }
+.ac-val { color: var(--ink); font-weight: 500; text-align: right; }
+
+/* Safety */
+.safety { background: linear-gradient(180deg, transparent, rgba(255,255,255,.025), transparent); }
+.safety-inner { display: grid; grid-template-columns: 1.3fr 1fr; gap: 4rem; align-items: center; }
+.safety-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+.safety-stats > div {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.02) 100%),
+    rgba(20, 24, 29, .55);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+}
+.safety-stats strong {
+  font-family: var(--font-display); font-size: 1.5rem;
+  background: linear-gradient(180deg, #fff 0%, #b9bdc4 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  display: block; line-height: 1; margin-bottom: .35rem;
+}
+.safety-stats span { font-size: .8rem; color: var(--muted); }
+.hex-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 380px; margin-inline: auto; }
+.hex {
+  aspect-ratio: 1;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,.015) 100%),
+    rgba(20, 24, 29, .5);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  display: grid; place-items: center;
+  font-family: var(--font-display); font-size: 1.5rem;
+  color: var(--muted); position: relative; overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+  transition: background .45s ease, border-color .45s ease, color .25s ease,
+              box-shadow .45s ease, transform .35s cubic-bezier(.2,.8,.2,1);
+}
+.hex::after {
+  content: "✓";
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: #0b0c0e;
+  opacity: 0;
+  transform: scale(.4);
+  transition: opacity .35s ease, transform .45s cubic-bezier(.2,.9,.2,1.2);
+}
+.hex-on {
+  background: linear-gradient(180deg, #fafbfd 0%, #c9cdd4 100%);
+  border-color: rgba(255,255,255,.6); color: #0b0c0e;
+  transform: scale(1.02);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.9),
+    inset 0 -1px 0 rgba(0,0,0,.15),
+    0 18px 40px -10px rgba(0,0,0,.6);
+}
+.hex-on::after { opacity: 1; transform: scale(1); }
+
+/* Careers */
+.careers-card {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.12) 0%, rgba(255,255,255,.04) 30%, rgba(255,255,255,.02) 100%),
+    linear-gradient(135deg, #2a2e35 0%, #14171b 100%);
+  border: 1px solid var(--glass-border-strong);
+  color: var(--ink);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+  position: relative; overflow: hidden;
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255,255,255,.16);
+}
+.careers-card::before {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(255,255,255,.12), transparent 50%),
+    radial-gradient(circle at 10% 90%, rgba(255,255,255,.06), transparent 55%);
+  pointer-events: none;
+}
+.careers-card > * { position: relative; z-index: 1; }
+.white-dim { color: var(--ink-3); max-width: 50ch; }
+
+/* Quote */
+.quote-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 4rem; align-items: start; }
+.contact-blocks { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+.contact-block {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.02) 100%),
+    rgba(20, 24, 29, .55);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 1.05rem 1.15rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+}
+.cb-label { display: block; font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: .4rem; }
+.contact-block a, .contact-block > span:last-child { color: var(--ink); font-weight: 500; }
+.contact-block a:hover { color: var(--silver-1); }
+.quote-form {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.02) 100%),
+    rgba(20, 24, 29, .6);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: grid; gap: 1rem;
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255,255,255,.07);
+}
+.quote-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.quote-form label { display: grid; gap: .4rem; font-size: .8rem; color: var(--muted); letter-spacing: .04em; }
+.quote-form input, .quote-form select, .quote-form textarea {
+  background: rgba(255,255,255,.045);
+  border: 1px solid var(--glass-border);
+  color: var(--ink);
+  padding: .85rem 1rem;
+  border-radius: 12px;
+  font: inherit; font-size: .95rem;
+  transition: border-color .2s ease, background .2s ease, box-shadow .2s ease;
+}
+.quote-form input::placeholder, .quote-form textarea::placeholder { color: var(--muted); }
+.quote-form input:focus, .quote-form select:focus, .quote-form textarea:focus {
+  outline: none; border-color: rgba(255,255,255,.4);
+  background: rgba(255,255,255,.07);
+  box-shadow: 0 0 0 3px rgba(255,255,255,.08);
+}
+.quote-form textarea { resize: vertical; }
+.quote-form select option { background: #14181d; color: var(--ink); }
+.form-sent {
+  margin: 0; color: var(--ink); font-weight: 600; font-size: .92rem;
+  background: rgba(255,255,255,.08);
+  border: 1px solid var(--glass-border-strong);
+  border-radius: 12px; padding: .8rem 1rem;
+}
+
+/* Footer */
+.footer { border-top: 1px solid var(--hairline); padding: 4rem 0 2rem; background: var(--bg-2); }
+.footer-grid { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 2rem; margin-bottom: 3rem; }
+.footer h4 { font-size: .76rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; font-weight: 600; font-family: var(--font-sans); }
+.footer a, .footer span { display: block; color: var(--ink-3); font-size: .9rem; padding: .25rem 0; }
+.footer a:hover { color: var(--ink); }
+.foot-line { margin-top: 1rem; color: var(--muted); font-size: .85rem; }
+.foot-bottom { display: flex; justify-content: space-between; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--hairline); font-size: .82rem; color: var(--muted); }
+.foot-bottom > span { display: flex; align-items: center; gap: .35rem; }
+.foot-bottom #year { display: inline; padding: 0; }
+
+/* Reveal */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .links, .nav-cta .ghost-link { display: none; }
+  .nav-cta .btn { display: none; }
+  .service-grid, .proj-grid, .cat-grid { grid-template-columns: 1fr; }
+  .modal-body { padding: 2rem 1.5rem 1.5rem; }
+  .about-grid, .safety-inner, .quote-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-card { position: static; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .careers-card { flex-direction: column; align-items: flex-start; padding: 2rem; }
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 1rem 1.5rem; }
+  .section { padding: 5rem 0; }
+}
+@media (max-width: 560px) {
+  .footer-grid, .contact-blocks, .quote-form .row { grid-template-columns: 1fr; }
+  .hero { padding-top: 6rem; }
+  .brand-logo { height: 38px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand" aria-label="Bow Mark home">
+      <img class="brand-logo" src="images/logo.png" alt="Bow Mark" />
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#safety">Safety</a>
+      <a href="#careers">Careers</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+14039387920" class="ghost-link">403.938.7920</a>
+      <a href="#quote" class="btn">Request a quote</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#safety">Safety</a>
+    <a href="#careers">Careers</a>
+    <a href="community.html">In the Community</a>
+    <a href="tel:+14039387920" class="ghost-link">403.938.7920</a>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO with real photo -->
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="eyebrow">
+        <span class="dot"></span> Established in Okotoks, AB · 1979
+      </div>
+      <h1 class="hero-title">
+        We build the ground<br/>
+        <span class="grad">Alberta moves on.</span>
+      </h1>
+      <p class="hero-sub">
+        Asphalt paving, concrete, and full construction management, engineered for commercial, residential, and transportation infrastructure projects across the province.
+      </p>
+      <div class="hero-cta">
+        <a href="#quote" class="btn btn-lg">
+          Start a project
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#services" class="btn btn-ghost btn-lg">Explore services</a>
+      </div>
+      <dl class="stats">
+        <div class="stat"><dt>Years in business</dt><dd><span class="count" data-to="47">47</span><sup>+</sup></dd></div>
+        <div class="stat"><dt>Service areas</dt><dd><span class="count" data-to="3">3</span></dd></div>
+        <div class="stat"><dt>COR safety certified</dt><dd>✓</dd></div>
+        <div class="stat"><dt>Family-led since</dt><dd><span class="count" data-to="1979">1979</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Ticker -->
+  <section class="trust" aria-label="Capabilities">
+    <div class="container">
+      <div class="ticker">
+        <div class="ticker-row">
+          <span>Asphalt Paving</span><span>·</span>
+          <span>Concrete Work</span><span>·</span>
+          <span>Site Preparation</span><span>·</span>
+          <span>Grading &amp; Excavation</span><span>·</span>
+          <span>Construction Management</span><span>·</span>
+          <span>Curb &amp; Gutter</span><span>·</span>
+          <span>Subdivision Servicing</span><span>·</span>
+          <span>Highway Infrastructure</span><span>·</span>
+          <span>Parking Lots</span><span>·</span>
+          <span>Asphalt Paving</span><span>·</span>
+          <span>Concrete Work</span><span>·</span>
+          <span>Site Preparation</span><span>·</span>
+          <span>Grading &amp; Excavation</span><span>·</span>
+          <span>Construction Management</span><span>·</span>
+          <span>Curb &amp; Gutter</span><span>·</span>
+          <span>Subdivision Servicing</span><span>·</span>
+          <span>Highway Infrastructure</span><span>·</span>
+          <span>Parking Lots</span><span>·</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <!-- SERVICES / WORK (merged) -->
+  <section class="section projects" id="services">
+    <div class="container">
+      <header class="section-head">
+        <p class="kicker">01 · What we do</p>
+        <h2>Our Services</h2>
+      </header>
+      <div class="cat-grid">
+        <button class="cat-card" type="button" data-cat="residential" aria-haspopup="dialog">
+          <div class="cat-img"><img src="images/residential/IMG_4083.jpg" alt="Bow Mark concrete site works and walkways framing a new multi-family residential building at sunset" loading="lazy" /></div>
+          <div class="cat-meta">
+            <span class="cat-tag">01 · Category</span>
+            <h3>Residential Developments</h3>
+            <p>Subdivision servicing on the developer's schedule.</p>
+            <span class="cat-link">Read more <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </div>
+        </button>
+
+        <button class="cat-card" type="button" data-cat="commercial" aria-haspopup="dialog">
+          <div class="cat-img"><img src="images/commercial/DArcyCommercialOkotoks.jpg" alt="Bow Mark CAT AP1055E paver laying fresh asphalt at the D'Arcy commercial development in Okotoks" loading="lazy" /></div>
+          <div class="cat-meta">
+            <span class="cat-tag">02 · Category</span>
+            <h3>Commercial &amp; Industrial Surface Works</h3>
+            <p>Heavy-duty pavement built for fleet traffic and decades of use.</p>
+            <span class="cat-link">Read more <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </div>
+        </button>
+
+        <button class="cat-card" type="button" data-cat="transportation" aria-haspopup="dialog">
+          <div class="cat-img"><img src="images/transportation/IMG_6879.jpg" alt="Bow Mark crew working on concrete barrier and bridge structure along the West Calgary Ring Road" loading="lazy" /></div>
+          <div class="cat-meta">
+            <span class="cat-tag">03 · Category</span>
+            <h3>Transportation Infrastructure</h3>
+            <p>Highways, arterials, and bridge-deck overlays across Alberta.</p>
+            <span class="cat-link">Read more <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <div>
+        <p class="kicker">02 · About Bow Mark</p>
+        <h2>A family-built company<br/><span class="muted">that's been paving Alberta since 1979.</span></h2>
+        <p class="lede">
+          Three generations. Two trades. One promise: when Bow Mark prices a project, we deliver it. Period.
+        </p>
+        <p>
+          From the first asphalt lift on a rural Okotoks road in 1979 to today's highway-grade overlays and full-scale subdivision builds, we've grown by doing exactly what we said we would. Our crews self-perform paving, concrete, grading, and construction management, so there's no handoff, no finger-pointing, and no daylight between estimate and execution.
+        </p>
+        <ul class="check-list">
+          <li>Self-performed paving, concrete &amp; civil</li>
+          <li>In-house estimating &amp; project management</li>
+          <li>COR-certified safety program</li>
+          <li>Local crews, local accountability</li>
+        </ul>
+        <a href="#quote" class="btn">Work with us</a>
+      </div>
+      <aside class="about-card">
+        <div class="ac-row"><span class="ac-label">Founded</span><span class="ac-val">1979</span></div>
+        <div class="ac-row"><span class="ac-label">HQ</span><span class="ac-val">Okotoks, AB</span></div>
+        <div class="ac-row"><span class="ac-label">Trades self-performed</span><span class="ac-val">Paving · Concrete · Civil</span></div>
+        <div class="ac-row"><span class="ac-label">Safety</span><span class="ac-val">COR certified</span></div>
+        <div class="ac-row"><span class="ac-label">Sectors</span><span class="ac-val">Commercial · Residential · Transport</span></div>
+        <div class="ac-row"><span class="ac-label">Service area</span><span class="ac-val">Alberta-wide</span></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SAFETY -->
+  <section class="section safety" id="safety">
+    <div class="container safety-inner">
+      <div>
+        <p class="kicker">03 · Safety</p>
+        <h2>Everyone goes home <span class="muted">the way they came in.</span></h2>
+        <p>
+          Safety is not a department at Bow Mark. It's the way we plan, scope, mobilize, and demobilize every single project. Our Certificate of Recognition (COR) program is audited annually, and every crew member is trained, ticketed, and accountable.
+        </p>
+        <div class="safety-stats">
+          <div><strong>COR</strong><span>Certified</span></div>
+          <div><strong>100%</strong><span>Trained crews</span></div>
+          <div><strong>Daily</strong><span>Hazard assessments</span></div>
+        </div>
+      </div>
+      <div aria-hidden="true">
+        <div class="hex-grid" id="hexGrid">
+          <div class="hex"></div><div class="hex"></div><div class="hex"></div>
+          <div class="hex"></div><div class="hex"></div><div class="hex"></div>
+          <div class="hex"></div><div class="hex"></div><div class="hex"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREERS -->
+  <section class="section" id="careers">
+    <div class="container">
+      <div class="careers-card">
+        <div>
+          <p class="kicker">04 · Careers</p>
+          <h2>Build a career, not just a season.</h2>
+          <p class="white-dim">Equipment operators, finishers, labourers, foremen, and estimators. If you take pride in your craft and your crew, we want to hear from you.</p>
+        </div>
+        <a href="#quote" class="btn btn-lg">View openings</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="section" id="quote">
+    <div class="container quote-grid">
+      <div>
+        <p class="kicker">05 · Get a quote</p>
+        <h2>Tell us about <span class="muted">your project.</span></h2>
+        <p class="lede">Most quote requests come back inside two business days. For tight schedules, call directly and ask for estimating.</p>
+        <div class="contact-blocks">
+          <div class="contact-block"><span class="cb-label">Call</span><a href="tel:+14039387920">403.938.7920</a></div>
+          <div class="contact-block"><span class="cb-label">Fax</span><span>403.938.7283</span></div>
+          <div class="contact-block"><span class="cb-label">Visit</span><span>33 Southbank Crescent<br/>Okotoks, AB · T1S 5S8</span></div>
+          <div class="contact-block"><span class="cb-label">Hours</span><span>Mon–Fri · 7:30a – 4:30p</span></div>
+        </div>
+      </div>
+      <form class="quote-form" onsubmit="event.preventDefault(); this.querySelector('.form-sent').hidden=false; this.reset();">
+        <div class="row">
+          <label><span>Full name</span><input type="text" required placeholder="Jane Builder" /></label>
+          <label><span>Company</span><input type="text" placeholder="Optional" /></label>
+        </div>
+        <div class="row">
+          <label><span>Email</span><input type="email" required placeholder="you@company.com" /></label>
+          <label><span>Phone</span><input type="tel" placeholder="403.000.0000" /></label>
+        </div>
+        <label><span>Project type</span>
+          <select>
+            <option>Commercial / Industrial</option>
+            <option>Residential development</option>
+            <option>Transportation infrastructure</option>
+            <option>Concrete only</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label><span>Tell us about the work</span><textarea rows="4" placeholder="Site, scope, timeline, drawings..."></textarea></label>
+        <button type="submit" class="btn btn-lg btn-block">
+          Send request
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <p class="form-sent" hidden>✓ Thanks. We'll be in touch within two business days.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- Category detail modal -->
+<div class="modal" id="catModal" role="dialog" aria-modal="true" aria-labelledby="catModalTitle" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel" role="document">
+    <button class="modal-close" type="button" aria-label="Close" data-close>
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <div class="modal-body">
+      <p class="modal-kicker" id="catModalKicker">Service category</p>
+      <h2 class="modal-title" id="catModalTitle">Title</h2>
+      <section class="modal-section">
+        <h3>What it means</h3>
+        <div id="catModalMeans"></div>
+      </section>
+      <section class="modal-section">
+        <h3>Why it matters for Alberta</h3>
+        <div id="catModalMatters"></div>
+      </section>
+      <div class="modal-gallery" id="catModalGallery"></div>
+      <div class="modal-cta">
+        <a href="#quote" class="btn" data-close>Scope a project</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="#top" class="brand">
+        <img class="brand-logo" src="images/logo.png" alt="Bow Mark" />
+      </a>
+      <p class="foot-line">Paving Alberta since 1979.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <a href="#services">Commercial &amp; Industrial</a>
+      <a href="#services">Residential developments</a>
+      <a href="#services">Transportation</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="#about">About</a>
+      <a href="#safety">Safety</a>
+      <a href="#careers">Careers</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="tel:+14039387920">403.938.7920</a>
+      <span>33 Southbank Cres.<br/>Okotoks, AB · T1S 5S8</span>
+    </div>
+  </div>
+  <div class="container foot-bottom">
+    <span>© <span id="year"></span> Bow Mark Paving &amp; Concrete Ltd.</span>
+    <span>Built in Alberta.</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const nav = document.getElementById('nav');
+const onScroll = () => {
+  if (window.scrollY > 12) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+menuBtn?.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  mobileMenu.setAttribute('aria-hidden', open ? 'false' : 'true');
+});
+mobileMenu?.querySelectorAll('a').forEach((a) => {
+  a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+  });
+});
+
+const revealEls = document.querySelectorAll(
+  '.section-head, .service-card, .proj, .about-card, .safety-stats > div, .hex, .careers-card, .quote-form, .contact-block'
+);
+revealEls.forEach((el) => el.classList.add('reveal'));
+const io = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
+revealEls.forEach((el) => io.observe(el));
+
+const counters = document.querySelectorAll('.count');
+const cio = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = +el.dataset.to;
+      const start = target > 1000 ? target - 50 : 0;
+      const dur = 1400;
+      const t0 = performance.now();
+      const step = (t) => {
+        const p = Math.min((t - t0) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(start + (target - start) * eased).toString();
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+      cio.unobserve(el);
+    });
+  },
+  { threshold: 0.6 }
+);
+counters.forEach((c) => cio.observe(c));
+
+// ---------- Category modal ----------
+const CAT_DATA = {
+  residential: {
+    title: "Residential Developments",
+    chips: ["Subdivisions", "Roadworks", "Sidewalks", "Multi-family", "Driveways", "Grading"],
+    means: [
+      "Full civil servicing for new subdivisions and residential builds: site grading, asphalt roadways, concrete curbs and gutters, sidewalks, driveways, and shallow utility road construction. Delivered to the developer's phasing schedule so home builders can break ground on time.",
+      "Multi-family developments too: the asphalt parking areas, concrete site works, and access aprons that turn a stack of foundations into a livable address."
+    ],
+    matters: [
+      "Alberta is growing faster than almost any other province. Calgary's metro alone added roughly 100,000 people over the last two years, and the foothills communities, including Okotoks, are absorbing that growth.",
+      "A new subdivision needs fully-serviced roads, walks, and curbs before any home can be occupied. Paving and concrete lag is the single most common cause of phase delays for residential developers. Bow Mark partners with developers on responsible builds across Calgary, Okotoks, Cochrane, Airdrie, Chestermere, and Strathmore."
+    ],
+    projects: [
+      {
+        name: "New Subdivision Road Construction",
+        where: "Calgary, Okotoks, Cochrane, Airdrie, Chestermere & Strathmore, AB",
+        blurb: "Bow Mark partners with developers across the region on subdivision road construction. Asphalt roadways, concrete, and shallow utility works that turn raw parcels into liveable communities with modern infrastructure and well-designed road networks.",
+        shots: [
+          { src: "images/residential/DJI_0259.jpg",
+            caption: "Aerial view of new subdivision roadways with fresh asphalt loops cut through graded lots." },
+          { src: "images/residential/DJI_0264.jpg",
+            caption: "Drone overview of an in-progress subdivision build showing curb, gutter, and road network." },
+          { src: "images/residential/DJI_0385.jpg",
+            caption: "Completed road network ready for home foundations to come in behind." }
+        ]
+      },
+      {
+        name: "Multi-Family Developments",
+        where: "Calgary and surrounding area, AB",
+        blurb: "Multi-family communities call for modern, convenient surface works structured to urban living: shared driveways, concrete site walks, parking aprons, and access roads that handle the higher traffic of stacked density.",
+        shots: [
+          { src: "images/residential/Carrington.jpg",
+            caption: "Surface works at the Carrington multi-family development, north Calgary." },
+          { src: "images/residential/IMG_4083.jpg",
+            caption: "Concrete and asphalt work on a multi-family site during build-out." },
+          { src: "images/residential/Kingsland.jpg",
+            caption: "Finished surface works at the Kingsland multi-family build, south Calgary." }
+        ]
+      }
+    ]
+  },
+  commercial: {
+    title: "Commercial & Industrial Surface Works",
+    chips: ["Retail centres", "Industrial yards", "Distribution centres", "Fleet depots", "Resurfacing"],
+    means: [
+      "Heavy-duty asphalt and concrete pavements engineered for traffic loads that would crack residential mixes: distribution yards, big-box parking lots, fleet depots, industrial pads, retail centres, town-centre arterials. Includes resurfacing and full-depth reconstruction.",
+      "Work that has to balance long-life pavement against tight, often live-site sequencing. Paving a retail parking lot without closing the drive-thru is its own discipline."
+    ],
+    matters: [
+      "Alberta's economy runs on freight, oil and gas logistics, and agriculture. Industrial pavement is the floor that fleet operations are built on; a cracked yard pulls trucks out of rotation, costs fuel, and damages chassis.",
+      "Commercial and town-centre surfaces are also the first thing customers and residents experience. Smooth, well-built pavement is a quiet civic asset. Bow Mark builds for the loads that are actually delivered, not the loads on the spec sheet."
+    ],
+    projects: [
+      {
+        name: "D'Arcy Ranch Commercial Surface Works",
+        where: "Okotoks, AB",
+        blurb: "Mixed-use shopping centre on the north edge of Okotoks, anchored by Safeway and Shoppers Drug Mart. Site grading, granular base, full asphalt paving, concrete site works, curb and gutter, and sidewalks.",
+        shots: [
+          { src: "images/commercial/DArcyCommercialOkotoks.jpg",
+            caption: "CAT AP1055E paving train laying asphalt alongside the new steel-frame retail anchor." },
+          { src: "images/commercial/DArcyCommercialOkotoks2.jpg",
+            caption: "Surface works on the parking and access pad during active build-out." },
+          { src: "images/commercial/DArcyCommercialOkotoks3.jpg",
+            caption: "Completed paving with concrete site works integrated for pedestrian flow." }
+        ]
+      },
+      {
+        name: "Cornerstone Commercial Surface Works",
+        where: "Northeast Calgary, AB",
+        blurb: "Shopping centre serving the expanding northeast Calgary neighbourhood. Site grading, granular base, asphalt paving, concrete site works, curb and gutter, sidewalks, plus pathway and line painting.",
+        shots: [
+          { src: "images/commercial/CornerstoneBasePreparation.jpg",
+            caption: "Loader on site with the new concrete catch basin set ahead of paving." },
+          { src: "images/commercial/CornerstonePaving4.jpg",
+            caption: "Asphalt paving for the centre's parking and access lanes." },
+          { src: "images/commercial/IMG_6867.jpg",
+            caption: "Surface finishing and detail work on the completed lot." }
+        ]
+      },
+      {
+        name: "Costco Western Canada Distribution Centre",
+        where: "Highland Park, Airdrie, AB",
+        blurb: "700,000 sq ft expansion of Costco's Western Canada distribution hub. Stringent groundwork specs: new municipal access road, site grading, granular base, curb and gutters, concrete dolly pads, concrete aprons, specialty asphalt roadway and parking with full line painting.",
+        shots: [
+          { src: "images/commercial/CostcoBasePreparation.jpg",
+            caption: "Granular base preparation across the expansion footprint, ready for asphalt." },
+          { src: "images/commercial/CostcoPaving.jpg",
+            caption: "Asphalt paving on the new municipal access route into the distribution centre." },
+          { src: "images/commercial/IMG_0872.jpg",
+            caption: "Concrete dolly pads and aprons engineered for distribution-grade loads." }
+        ]
+      },
+      {
+        name: "Cargill Site Improvements",
+        where: "High River, AB",
+        blurb: "CFIA-regulated beef processing facility. Concrete pad for cattle truck turnaround, plus access improvements on the north entrance adding additional trucking lanes.",
+        shots: [
+          { src: "images/commercial/IMG_3339.jpg",
+            caption: "Concrete pour on the new heavy-vehicle pad at the processing facility." },
+          { src: "images/commercial/IMG_3334.jpg",
+            caption: "North-side access widened to accommodate additional trucking lanes." }
+        ]
+      }
+    ]
+  },
+  transportation: {
+    title: "Transportation Infrastructure",
+    chips: ["Ring Road", "Bridges", "BRT / Transit", "Flood barriers", "Overlays", "Rehabilitation"],
+    means: [
+      "Highway, arterial, and municipal road construction at provincial scale: bridge replacements and widenings, Ring Road segments, transit park-and-rides, structural asphalt overlays, and rehabilitation of existing routes.",
+      "Includes the heavy civil work that surrounds the pavement: concrete barriers, pedestrian bridges, flood barriers, stormwater improvements, and coordinated traffic accommodation that keeps Alberta moving while we build."
+    ],
+    matters: [
+      "Alberta's road network is the backbone of the provincial economy. The QE2 and Calgary's Ring Road carry an enormous share of the province's freight, commuter, and supply chain traffic.",
+      "Pavement on these routes has to survive freeze-thaw, snowplow blades, chained tires, and oversize loads. Overlays and rehabs happen on a tight weather-bound window between spring breakup and the first hard frost. The contractors who succeed at this work are the ones who can mobilize on short notice and complete every lift inside the brief Alberta paving season."
+    ],
+    projects: [
+      {
+        name: "Stoney Trail Over the Bow River",
+        where: "Southeast Calgary, AB",
+        blurb: "A City of Calgary and Government of Alberta capital project improving the Ring Road for highway commuters, travellers, and supply-chain traffic. Replaces the eastbound bridge, widens the westbound bridge, and adds a new pedestrian bridge over the Bow River.",
+        shots: [
+          { src: "images/transportation/HFUM2179.jpg",
+            caption: "Active surface and structural work on the Stoney Trail crossing." },
+          { src: "images/transportation/StoneyTrailovertheBowRiver.jpg",
+            caption: "Stoney Trail bridge work over the Bow River." },
+          { src: "images/transportation/StoneyTrailovertheBowRiver2.jpg",
+            caption: "Wide-deck view of the new Ring Road bridge structure." }
+        ]
+      },
+      {
+        name: "West Calgary Ring Road",
+        where: "Trans-Canada Hwy 1 to Banff By-Pass, Calgary, AB",
+        blurb: "The completed Calgary Ring Road provides more than 100 km of free-flow travel around the city, improving access to hospitals, schools, workplaces and recreation while reducing congestion inside the city.",
+        shots: [
+          { src: "images/transportation/IMG_6883.jpg",
+            caption: "Bow Mark crews on the West Calgary Ring Road alignment." },
+          { src: "images/transportation/IMG_6879.jpg",
+            caption: "Paving operations on the Ring Road corridor between the Trans-Canada and the Banff By-Pass." },
+          { src: "images/transportation/IMG_4669.jpg",
+            caption: "Interchange surface work feeding the free-flow Ring Road network." }
+        ]
+      },
+      {
+        name: "North Central BRT · North Pointe Park & Ride",
+        where: "North Calgary, AB",
+        blurb: "Park-and-ride lot for the City of Calgary's North Central Bus Rapid Transit, designed to feed into the future Green Line LRT.",
+        shots: [
+          { src: "images/transportation/IMG_4658.jpg",
+            caption: "Surface works at the North Pointe Park-and-Ride transit hub." },
+          { src: "images/transportation/IMG_4659.jpg",
+            caption: "BRT lot grading and access lanes built for high-frequency bus traffic." },
+          { src: "images/transportation/IMG_4660.jpg",
+            caption: "Completed pavement marking and stall layout for the Park-and-Ride." }
+        ]
+      },
+      {
+        name: "Downtown Flood Barrier",
+        where: "Eau Claire & the Bow River, Calgary, AB",
+        blurb: "A 1.39 km flood barrier and stormwater improvement program along downtown Calgary's riverfront, reducing the area's exposure to flood damage and protecting the Eau Claire district.",
+        shots: [
+          { src: "images/transportation/DTFB.jpg",
+            caption: "Downtown Flood Barrier construction along the Bow River corridor." },
+          { src: "images/transportation/IMG_5206.jpg",
+            caption: "Concrete and structural work on the Eau Claire riverfront barrier." },
+          { src: "images/transportation/IMG_5221.jpg",
+            caption: "Stormwater and surface works tied into the flood mitigation system." }
+        ]
+      }
+    ]
+  }
+};
+
+const modal = document.getElementById('catModal');
+const mKicker = document.getElementById('catModalKicker');
+const mTitle  = document.getElementById('catModalTitle');
+const mMeans  = document.getElementById('catModalMeans');
+const mMatters= document.getElementById('catModalMatters');
+const mGallery= document.getElementById('catModalGallery');
+let lastFocus = null;
+
+function openCat(key) {
+  const c = CAT_DATA[key];
+  if (!c) return;
+  mKicker.textContent = "Service category";
+  mTitle.textContent  = c.title;
+  const chipRow = c.chips ? `<ul class="modal-chips">${c.chips.map(x => `<li>${x}</li>`).join("")}</ul>` : "";
+  mMeans.innerHTML    = chipRow + c.means.map(p => `<p>${p}</p>`).join("");
+  mMatters.innerHTML  = c.matters.map(p => `<p>${p}</p>`).join("");
+  if (c.projects) {
+    mGallery.innerHTML = c.projects.map(p => `
+      <section class="modal-project">
+        <header class="modal-project-head">
+          <h4>${p.name}</h4>
+          <span class="modal-project-where">${p.where}</span>
+        </header>
+        <p class="modal-project-blurb">${p.blurb}</p>
+        <div class="modal-project-shots">
+          ${p.shots.map(s => `
+            <figure class="modal-shot">
+              <img src="${s.src}" alt="${p.name}, ${p.where}" loading="lazy" />
+              <figcaption>${s.caption}<br/><span class="modal-shot-where">${p.where}</span></figcaption>
+            </figure>`).join("")}
+        </div>
+      </section>`).join("");
+  } else {
+    mGallery.innerHTML = c.shots.map(s => `
+      <figure class="modal-shot">
+        <img src="${s.src}" alt="${s.title}" loading="lazy" />
+        <figcaption><strong>${s.title}</strong>${s.caption}</figcaption>
+      </figure>`).join("");
+  }
+
+  lastFocus = document.activeElement;
+  modal.hidden = false;
+  document.body.classList.add('modal-open');
+  modal.querySelector('.modal-close').focus();
+}
+
+function closeCat() {
+  modal.hidden = true;
+  document.body.classList.remove('modal-open');
+  if (lastFocus && lastFocus.focus) lastFocus.focus();
+}
+
+document.querySelectorAll('.cat-card').forEach(card => {
+  card.addEventListener('click', () => openCat(card.dataset.cat));
+});
+modal.addEventListener('click', (e) => {
+  if (e.target.closest('[data-close]')) closeCat();
+});
+document.addEventListener('keydown', (e) => {
+  if (!modal.hidden && e.key === 'Escape') closeCat();
+});
+
+// ---------- Safety hex scroll progression ----------
+const hexGrid = document.getElementById('hexGrid');
+const hexEls = Array.from(document.querySelectorAll('#hexGrid .hex'));
+
+let hexRaf = 0;
+function updateHexes() {
+  if (!hexGrid || hexEls.length !== 9) return;
+  const rect = hexGrid.getBoundingClientRect();
+  const vh = window.innerHeight || document.documentElement.clientHeight;
+  // progress: 0 when the grid's top first enters the viewport from below,
+  //           1 when the grid's centre reaches the viewport centre
+  const travel = vh / 2 + rect.height / 2;
+  const elapsed = vh - rect.top;
+  const progress = Math.max(0, Math.min(1, elapsed / travel));
+  const ticked = Math.round(progress * hexEls.length);
+  // tick in natural DOM order (row by row, left to right, top to bottom)
+  for (let i = 0; i < hexEls.length; i++) {
+    if (i < ticked) hexEls[i].classList.add('hex-on');
+    else hexEls[i].classList.remove('hex-on');
+  }
+}
+function scheduleHexUpdate() {
+  if (hexRaf) return;
+  hexRaf = requestAnimationFrame(() => { hexRaf = 0; updateHexes(); });
+}
+window.addEventListener('scroll', scheduleHexUpdate, { passive: true });
+window.addEventListener('resize', scheduleHexUpdate, { passive: true });
+updateHexes();
+</script>
+</body>
+</html>

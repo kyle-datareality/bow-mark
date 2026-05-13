@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Bow Mark · In the Community</title>
+<meta name="description" content="Bow Mark Paving & Concrete is highly involved in Okotoks and the surrounding community — sponsoring teams, building public infrastructure, and supporting local charities." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg:        #0b0d10;
+  --bg-2:      #0f1216;
+  --ink:       #f3f5f8;
+  --ink-2:     #d7dbe2;
+  --ink-3:     #a3a9b3;
+  --muted:     #6f7682;
+  --hairline:  rgba(255, 255, 255, 0.08);
+  --hairline-strong: rgba(255, 255, 255, 0.14);
+  --glass-bg:        rgba(255, 255, 255, 0.045);
+  --glass-bg-strong: rgba(255, 255, 255, 0.075);
+  --glass-border:    rgba(255, 255, 255, 0.10);
+  --glass-border-strong: rgba(255, 255, 255, 0.18);
+  --glass-shadow:    0 30px 70px -30px rgba(0,0,0,.7), 0 2px 6px -2px rgba(0,0,0,.4);
+  --silver-1: #e9ecf1;
+  --silver-2: #c2c6cd;
+  --silver-3: #8a8f97;
+  --hairln:   #2a2f38;
+  --radius:    14px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
+  --font-sans:    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --max: 1200px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--bg);
+  background-image:
+    radial-gradient(1200px 700px at 75% -10%, rgba(255,255,255,.05), transparent 60%),
+    radial-gradient(900px 600px at -15% 25%, rgba(255,255,255,.035), transparent 65%),
+    linear-gradient(180deg, #0a0c0f 0%, #0b0d10 60%, #0a0c0f 100%);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: 0; background: transparent; color: inherit; }
+.container { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+.skip { position: absolute; left: -9999px; background: #fff; color: #000; padding: .5rem 1rem; border-radius: 8px; }
+.skip:focus { left: 1rem; top: 1rem; z-index: 200; }
+
+h1, h2, h3, h4 { font-family: var(--font-display); margin: 0; letter-spacing: -.02em; line-height: 1.1; }
+h1 { font-size: clamp(2.5rem, 5.5vw, 4.5rem); font-weight: 700; }
+h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 600; }
+h3 { font-size: 1.2rem; font-weight: 600; }
+p { margin: 0 0 1rem; color: var(--ink-2); }
+.muted { color: var(--muted); font-weight: 500; }
+.kicker {
+  font-family: var(--font-sans);
+  text-transform: uppercase; letter-spacing: .2em; font-size: .72rem;
+  color: var(--silver-1); margin: 0 0 1rem; font-weight: 600;
+  display: inline-flex; align-items: center; gap: .55rem;
+}
+.kicker::before { content: ""; width: 24px; height: 1px; background: linear-gradient(90deg, var(--silver-1), transparent); }
+.lede { font-size: 1.08rem; color: var(--ink); max-width: 60ch; }
+
+/* Buttons */
+.btn {
+  position: relative; display: inline-flex; align-items: center; gap: .55rem;
+  padding: .85rem 1.25rem;
+  color: #0b0c0e; font-weight: 600; border-radius: 999px;
+  background: linear-gradient(180deg, #fafbfd 0%, #d6d9df 100%);
+  border: 1px solid rgba(255,255,255,.6);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.7) inset,
+    0 -1px 0 rgba(0,0,0,.10) inset,
+    0 12px 30px -10px rgba(0,0,0,.55),
+    0 4px 10px -2px rgba(0,0,0,.35);
+  transition: transform .2s ease, filter .2s ease;
+  white-space: nowrap; isolation: isolate; overflow: hidden;
+}
+.btn::after {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,.55), transparent);
+  pointer-events: none; border-radius: 999px 999px 0 0;
+}
+.btn:hover { transform: translateY(-1px); filter: brightness(1.04); }
+.btn-block { display: inline-flex; width: 100%; justify-content: center; }
+.ghost-link {
+  display: inline-flex; align-items: center; gap: .45rem;
+  color: var(--ink-3); font-size: .9rem;
+  font-variant-numeric: tabular-nums;
+  padding: .45rem .75rem; border-radius: 999px;
+  border: 1px solid transparent;
+  transition: color .2s ease, border-color .2s ease, background .2s ease;
+}
+.ghost-link:hover { color: var(--ink); border-color: var(--glass-border-strong); background: var(--glass-bg); }
+
+/* Nav (same as index) */
+.nav {
+  position: sticky; top: 0; left: 0; right: 0; z-index: 50;
+  background: linear-gradient(180deg, rgba(11, 13, 16, .92) 0%, rgba(11, 13, 16, .78) 100%);
+  border-bottom: 1px solid transparent;
+  transition: background .25s ease, border-color .25s ease;
+}
+.nav.scrolled {
+  background: linear-gradient(180deg, rgba(11, 13, 16, .96) 0%, rgba(11, 13, 16, .88) 100%);
+  border-bottom-color: var(--hairline);
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,.5);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: .9rem 0; gap: 2rem; }
+.brand { display: inline-flex; align-items: center; gap: .8rem; text-decoration: none; }
+.brand-logo { height: 44px; width: auto; filter: drop-shadow(0 6px 14px rgba(0,0,0,.55)); }
+.links { display: flex; gap: 2rem; }
+.links a {
+  color: var(--ink-2); font-size: .92rem; font-weight: 500;
+  position: relative;
+}
+.links a:hover { color: var(--ink); }
+.links a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 2px;
+  background: linear-gradient(90deg, var(--silver-1), var(--silver-2));
+  border-radius: 2px; transform: scaleX(0); transform-origin: left;
+  transition: transform .25s ease;
+}
+.links a:hover::after, .links a.active::after { transform: scaleX(1); }
+.nav-cta { display: flex; align-items: center; gap: .85rem; }
+.menu-btn {
+  display: inline-flex; width: 42px; height: 42px;
+  flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+  border: 1px solid var(--glass-border-strong);
+  margin-left: .25rem;
+  transition: background .2s ease, border-color .2s ease;
+}
+.menu-btn:hover { background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.28); }
+.menu-btn span {
+  display: block; width: 20px; height: 2px; background: var(--ink); border-radius: 2px;
+  transition: transform .25s ease, opacity .2s ease;
+}
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-menu {
+  display: none; flex-direction: column; gap: .25rem;
+  padding: 1rem 1.25rem 1.5rem;
+  background: rgba(11, 13, 16, .98);
+  border-bottom: 1px solid var(--hairline);
+}
+.mobile-menu a { padding: .75rem 0; color: var(--ink); border-bottom: 1px solid var(--hairline); }
+.mobile-menu a.btn, .mobile-menu a:last-child { border-bottom: 0; }
+.mobile-menu.open { display: flex; }
+
+/* Page hero */
+.page-hero {
+  padding: 5rem 0 3.5rem;
+  position: relative; overflow: hidden;
+  border-bottom: 1px solid var(--hairline);
+}
+.page-hero::before {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(700px 400px at 80% 40%, rgba(255,255,255,.05), transparent 60%),
+    radial-gradient(500px 300px at 10% 70%, rgba(255,255,255,.04), transparent 60%);
+  pointer-events: none;
+}
+.page-hero-inner { position: relative; }
+.page-hero h1 { margin: 0 0 1.5rem; }
+.grad {
+  background: linear-gradient(180deg, #ffffff 0%, #cdd1d7 45%, #888d96 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.page-hero p { font-size: 1.1rem; max-width: 60ch; color: var(--ink-2); }
+
+/* Content sections */
+.section { padding: 5rem 0; position: relative; }
+.section + .section { padding-top: 0; }
+.section-head { margin-bottom: 2.5rem; max-width: 720px; }
+
+/* Two-col split (image + text) */
+.split {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 3rem; align-items: center;
+}
+.split.reverse { grid-template-columns: 1fr 1fr; direction: rtl; }
+.split.reverse > * { direction: ltr; }
+.split-img {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  background: rgba(20,24,29,.6);
+  box-shadow: var(--glass-shadow);
+}
+.split-img img {
+  width: 100%; height: auto; display: block;
+  aspect-ratio: 4 / 3; object-fit: cover;
+  filter: saturate(.92) contrast(1.05);
+}
+
+/* Initiative grid */
+.init-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
+}
+.init-card {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,.015) 100%),
+    rgba(20,24,29,.55);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+}
+.init-card h3 { margin: 0 0 .65rem; font-size: 1.15rem; }
+.init-card p { font-size: .92rem; color: var(--ink-3); margin: 0; }
+.init-card .pill {
+  display: inline-block; font-size: .68rem; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--silver-1);
+  margin-bottom: .65rem; font-weight: 600;
+}
+
+/* Photo gallery row */
+.photo-row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+  margin-top: 2.5rem;
+}
+.photo {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  background: rgba(20,24,29,.6);
+  aspect-ratio: 4 / 3;
+}
+.photo img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .6s ease;
+  filter: saturate(.92) contrast(1.04);
+}
+.photo:hover img { transform: scale(1.04); }
+.photo figcaption { display: none; }
+
+/* Quote */
+.pull-quote {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.07) 0%, rgba(255,255,255,.02) 100%),
+    rgba(20,24,29,.6);
+  border: 1px solid var(--glass-border-strong);
+  border-radius: var(--radius-xl);
+  padding: 3rem 3rem;
+  position: relative; overflow: hidden;
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255,255,255,.10);
+}
+.pull-quote::before {
+  content: "\201C"; position: absolute;
+  top: -3rem; left: 1.5rem;
+  font-family: Georgia, serif;
+  font-size: 14rem; line-height: 1;
+  color: rgba(255,255,255,.06);
+  pointer-events: none;
+}
+.pull-quote blockquote {
+  margin: 0; font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 2rem); line-height: 1.3;
+  color: var(--ink); position: relative; z-index: 1;
+  letter-spacing: -.01em; font-weight: 500;
+}
+.pull-quote cite {
+  display: block; margin-top: 1.5rem; font-style: normal;
+  font-size: .82rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--silver-1); font-weight: 600;
+}
+
+/* Footer */
+.footer { border-top: 1px solid var(--hairline); padding: 4rem 0 2rem; background: var(--bg-2); margin-top: 4rem; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 2rem; margin-bottom: 3rem; }
+.footer h4 { font-size: .76rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; font-weight: 600; font-family: var(--font-sans); }
+.footer a, .footer span { display: block; color: var(--ink-3); font-size: .9rem; padding: .25rem 0; }
+.footer a:hover { color: var(--ink); }
+.foot-line { margin-top: 1rem; color: var(--muted); font-size: .85rem; }
+.foot-bottom { display: flex; justify-content: space-between; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--hairline); font-size: .82rem; color: var(--muted); }
+.foot-bottom > span { display: flex; align-items: center; gap: .35rem; }
+.foot-bottom #year { display: inline; padding: 0; }
+
+@media (max-width: 960px) {
+  .links, .nav-cta .ghost-link { display: none; }
+  .nav-cta .btn { display: none; }
+  .split, .split.reverse { grid-template-columns: 1fr; gap: 1.5rem; direction: ltr; }
+  .init-grid, .photo-row { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .section { padding: 3.5rem 0; }
+  .pull-quote { padding: 2rem 1.5rem; }
+}
+@media (max-width: 560px) {
+  .init-grid, .photo-row, .footer-grid { grid-template-columns: 1fr; }
+  .brand-logo { height: 38px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand" aria-label="Bow Mark home">
+      <img class="brand-logo" src="images/logo.png" alt="Bow Mark" />
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#safety">Safety</a>
+      <a href="index.html#careers">Careers</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+14039387920" class="ghost-link">403.938.7920</a>
+      <a href="index.html#quote" class="btn">Request a quote</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="index.html#services">Services</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#safety">Safety</a>
+    <a href="index.html#careers">Careers</a>
+    <a href="community.html" class="active">In the Community</a>
+    <a href="tel:+14039387920" class="ghost-link">403.938.7920</a>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <p class="kicker">In the Community</p>
+      <h1>Okotoks is <span class="grad">home.</span></h1>
+      <p>The Bow Mark Group is highly involved in the community we build for. Sponsorships, teams, public infrastructure, and charitable causes across Okotoks and the foothills, year after year.</p>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="section">
+    <div class="container">
+      <div class="pull-quote">
+        <blockquote>
+          For Bow Mark and President Sean McArthur, Okotoks is home. We're proud of where we come from, and we put that pride back into the community every chance we get.
+        </blockquote>
+        <cite>Bow Mark Paving &amp; Concrete</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPORTS / SPONSORSHIPS -->
+  <section class="section">
+    <div class="container">
+      <header class="section-head">
+        <p class="kicker">01 · Teams &amp; Sponsorships</p>
+        <h2>Backing local talent.</h2>
+      </header>
+
+      <div class="split">
+        <div class="split-img">
+          <img src="images/community/Okotoks_Dawgs.jpg" alt="Bow Mark sponsorship support at an Okotoks Dawgs baseball game" loading="lazy" />
+        </div>
+        <div>
+          <p class="kicker" style="color: var(--silver-2)">Title sponsor</p>
+          <h2>Bow Mark Oilers U-18AAA</h2>
+          <p>A major and proud contributor to the U-18AAA hockey program in Okotoks. Title sponsorship of the Bow Mark Oilers is one of the longest-running commitments the company makes each season.</p>
+          <p>Bow Mark also stands behind the Okotoks Dawgs baseball team, the Okotoks Oilers, the Okotoks Bisons, and countless minor sports teams across the foothills.</p>
+        </div>
+      </div>
+
+      <div class="photo-row">
+        <figure class="photo"><img src="images/community/Centennial_Arena.jpg" alt="Centennial Arena, Okotoks" loading="lazy" /></figure>
+        <figure class="photo"><img src="images/community/Zamboni.jpg" alt="Bow Mark sponsored Zamboni at the community arena" loading="lazy" /></figure>
+        <figure class="photo"><img src="images/community/Okotoks_Rodeo.jpg" alt="Okotoks Professional Rodeo" loading="lazy" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="section">
+    <div class="container">
+      <header class="section-head">
+        <p class="kicker">02 · Events</p>
+        <h2>Showing up for the big weekends.</h2>
+      </header>
+
+      <div class="init-grid">
+        <article class="init-card">
+          <span class="pill">Annual · Okotoks</span>
+          <h3>Okotoks Professional Rodeo</h3>
+          <p>Proud sponsor of one of the foothills' biggest annual events, drawing competitors and crowds from across western Canada.</p>
+        </article>
+        <article class="init-card">
+          <span class="pill">2023 · Provincial</span>
+          <h3>Alberta Summer Games</h3>
+          <p>Sponsor of the 2023 Alberta Summer Games, supporting amateur athletes from every corner of the province.</p>
+        </article>
+        <article class="init-card">
+          <span class="pill">Year-round</span>
+          <h3>Minor sports across the foothills</h3>
+          <p>Direct backing of the kids' leagues that grow into the senior teams above. Equipment, ice time, jersey sponsorships, and travel support.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY INFRASTRUCTURE -->
+  <section class="section">
+    <div class="container">
+      <header class="section-head">
+        <p class="kicker">03 · Community infrastructure</p>
+        <h2>Building the places people gather.</h2>
+      </header>
+
+      <div class="split reverse">
+        <div class="split-img">
+          <img src="images/community/McArthur_Stage.jpg" alt="McArthur Outdoor Stage at Okotoks Old Towne Square Plaza" loading="lazy" />
+        </div>
+        <div>
+          <p class="kicker" style="color: var(--silver-2)">Old Towne Square Plaza</p>
+          <h2>McArthur Outdoor Stage</h2>
+          <p>The McArthur Outdoor Stage anchors the Old Towne Square Plaza, hosting community concerts, festivals, and gatherings in the heart of Okotoks. Built to last, designed to bring people together.</p>
+        </div>
+      </div>
+
+      <div class="init-grid" style="margin-top:3rem">
+        <article class="init-card">
+          <span class="pill">Public facility</span>
+          <h3>Foothills Centennial Center</h3>
+          <p>Long-term support of the Centennial Center, the recreational heart of Okotoks.</p>
+        </article>
+        <article class="init-card">
+          <span class="pill">Inclusive design</span>
+          <h3>Bill Robertson Park Playground</h3>
+          <p>Backing the all-inclusive playground at Bill Robertson Park so every kid in town has a place to play.</p>
+        </article>
+        <article class="init-card">
+          <span class="pill">Arena assets</span>
+          <h3>Centennial &amp; Murray Arena Scoreboards</h3>
+          <p>Scoreboards at both Centennial Arena and Murray Arena, keeping minor and adult hockey running game-night ready.</p>
+        </article>
+      </div>
+
+      <div class="photo-row">
+        <figure class="photo"><img src="images/community/Old_Towne.jpg" alt="Old Towne Square Plaza, Okotoks" loading="lazy" /></figure>
+        <figure class="photo"><img src="images/community/Centennial_Arena.jpg" alt="Centennial Arena interior" loading="lazy" /></figure>
+        <figure class="photo"><img src="images/community/McArthur_Stage.jpg" alt="McArthur Outdoor Stage" loading="lazy" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHARITY -->
+  <section class="section">
+    <div class="container">
+      <header class="section-head">
+        <p class="kicker">04 · Charitable support</p>
+        <h2>The causes we stand behind.</h2>
+      </header>
+      <div class="init-grid">
+        <article class="init-card">
+          <span class="pill">End-of-life care</span>
+          <h3>Foothills Country Hospice</h3>
+          <p>Supporting the only freestanding rural hospice in southern Alberta, providing compassionate end-of-life care for foothills families.</p>
+        </article>
+        <article class="init-card">
+          <span class="pill">Food security</span>
+          <h3>Okotoks Food Bank</h3>
+          <p>Year-round contributions to the Okotoks Food Bank so neighbours in need can put dinner on the table.</p>
+        </article>
+        <article class="init-card">
+          <span class="pill">And more</span>
+          <h3>The list keeps growing.</h3>
+          <p>From small minor-sports cheques to multi-year capital commitments, Bow Mark gives where it lives. If you'd like to talk partnerships, get in touch.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="pull-quote" style="text-align:center">
+        <h2 style="margin-bottom:1.25rem">Want to partner on a community initiative?</h2>
+        <p style="max-width:50ch; margin-inline:auto; color: var(--ink-2)">If you run a team, an event, or a cause that fits with the foothills community, we'd like to hear about it.</p>
+        <a href="index.html#quote" class="btn" style="margin-top:1.5rem">Get in touch</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="index.html" class="brand">
+        <img class="brand-logo" src="images/logo.png" alt="Bow Mark" />
+      </a>
+      <p class="foot-line">Paving Alberta since 1979.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <a href="index.html#services">Commercial &amp; Industrial</a>
+      <a href="index.html#services">Residential developments</a>
+      <a href="index.html#services">Transportation</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="index.html#about">About</a>
+      <a href="index.html#safety">Safety</a>
+      <a href="index.html#careers">Careers</a>
+      <a href="community.html">In the Community</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="tel:+14039387920">403.938.7920</a>
+      <span>33 Southbank Cres.<br/>Okotoks, AB · T1S 5S8</span>
+    </div>
+  </div>
+  <div class="container foot-bottom">
+    <span>© <span id="year"></span> Bow Mark Paving &amp; Concrete Ltd.</span>
+    <span>Built in Alberta.</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const nav = document.getElementById('nav');
+const onScroll = () => {
+  if (window.scrollY > 12) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+menuBtn?.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  mobileMenu.setAttribute('aria-hidden', open ? 'false' : 'true');
+});
+mobileMenu?.querySelectorAll('a').forEach((a) => {
+  a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+  });
+});
+</script>
+</body>
+</html>
